@@ -1,3 +1,5 @@
+require 'yasm/yasm'
+
 require 'rprogram/task'
 
 module YASM
@@ -17,7 +19,7 @@ module YASM
                 :name => :output_format
     long_option :flag => '--dformat',
                 :equals => true,
-                :name => :debugging_format
+                :name => :debug_format
     long_option :flag => '--lformat',
                 :equals => true,
                 :name => :list_format
@@ -49,6 +51,16 @@ module YASM
     long_option :flag => '--suffix'
 
     non_option :tailing => true, :name => :file
+
+    def initialize(options={},&block)
+      super(options,&block)
+
+      self.parser ||= YASM.parser
+      self.arch ||= YASM.arch
+      self.machine ||= YASM.machine
+      self.debug_format ||= YASM.debug_format
+      self.output_format ||= YASM.output_format
+    end
 
     def gas!
       self.parser = :gas
