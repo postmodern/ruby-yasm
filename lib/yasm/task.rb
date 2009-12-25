@@ -48,6 +48,8 @@ module YASM
     long_option :flag => '--prefix'
     long_option :flag => '--suffix'
 
+    non_option :tailing => true, :name => :file
+
     def x86!
       self.arch = :x86
       self.machine = :x86
