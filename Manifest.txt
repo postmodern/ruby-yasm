@@ -3,6 +3,9 @@ Manifest.txt
 README.txt
 Rakefile
 lib/yasm.rb
+lib/yasm/task.rb
+lib/yasm/program.rb
+lib/yasm/yasm.rb
 lib/yasm/version.rb
 tasks/spec.rb
 tasks/yard.rb
