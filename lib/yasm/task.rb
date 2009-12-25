@@ -50,6 +50,23 @@ module YASM
 
     non_option :tailing => true, :name => :file
 
+    def gas!
+      self.parser = :gas
+      return true
+    end
+
+    alias gnu! gas!
+
+    def nasm!
+      self.parser = :nasm
+      return true
+    end
+
+    def tasm!
+      self.parser = :tasm
+      return true
+    end
+
     def x86!
       self.arch = :x86
       self.machine = :x86
