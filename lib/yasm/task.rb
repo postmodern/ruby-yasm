@@ -79,5 +79,77 @@ module YASM
       return true
     end
 
+    def dbg!
+      self.output_format = :dbg
+      return true
+    end
+
+    def bin!
+      self.output_format = :bin
+      return true
+    end
+
+    def dos_exe!
+      self.output_format = :dosexe
+      return true
+    end
+
+    def elf!
+      self.output_format = :elf
+      return true
+    end
+
+    def elf32!
+      self.output_format = :elf32
+      return true
+    end
+
+    def elf64!
+      self.output_format = :elf64
+      return true
+    end
+
+    def coff!
+      self.output_format = :coff
+      return true
+    end
+
+    def macho!
+      self.output_format = :macho
+      return true
+    end
+
+    def macho32!
+      self.output_format = :macho32
+      return true
+    end
+
+    def macho64!
+      self.output_format = :macho64
+      return true
+    end
+
+    def rdf!
+      self.output_format = :rdf
+      return true
+    end
+
+    def win32!
+      self.output_format = :win32
+      return true
+    end
+
+    def win64!
+      self.output_format = :win64
+      return true
+    end
+
+    alias x64! win64!
+
+    def xdf!
+      self.output_format = :xdf
+      return true
+    end
+
   end
 end
