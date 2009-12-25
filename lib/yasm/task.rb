@@ -5,6 +5,7 @@ module YASM
 
     long_option :flag => '--version'
     long_option :flag => '--license'
+
     long_option :flag => '--help'
     long_option :flag => '--arch', :equals => true
     long_option :flag => '--parser', :equals => true
@@ -46,6 +47,18 @@ module YASM
     short_option :flag => '-X', :name => :message_style
     long_option :flag => '--prefix'
     long_option :flag => '--suffix'
+
+    def x86!
+      self.arch = :x86
+      self.machine = :x86
+      return true
+    end
+
+    def amd64!
+      self.arch = :x86
+      self.machine = :amd64
+      return true
+    end
 
   end
 end
