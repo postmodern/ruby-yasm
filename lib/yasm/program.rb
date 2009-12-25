@@ -1,6 +1,7 @@
 require 'yasm/task'
 
 require 'rprogram'
+require 'tempfile'
 
 module YASM
   class Program < RProgram::Program
@@ -13,6 +14,15 @@ module YASM
 
     def assemble(options={},&block)
       run_task(Task.new(options,&block)
+    end
+
+    def assemble_temp(options={},&block)
+      task = Task.new(options,&block)
+      task.output = TempFile.new('yasm')
+
+      if run_task(task)
+        return task.output
+      end
     end
 
   end
