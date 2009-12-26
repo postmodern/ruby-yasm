@@ -1,9 +1,9 @@
 module YASM
-  @@yasm_parser = :gas
+  @@yasm_parser = nil
   @@yasm_arch = nil
   @@yasm_machine = nil
   @@yasm_debug_format = nil
-  @@yasm_output_format = :bin
+  @@yasm_output_format = nil
 
   #
   # The default YASM parser to use.
