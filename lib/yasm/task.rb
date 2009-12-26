@@ -111,6 +111,9 @@ module YASM
       self.output_format ||= YASM.output_format
     end
 
+    alias syntax parser
+    alias syntax= parser=
+
     #
     # Sets the YASM parser to +gas+.
     #
