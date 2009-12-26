@@ -45,7 +45,7 @@ module YASM
     #   Specifies whether the command exited normally.
     #
     def assemble(options={},&block)
-      run_task(Task.new(options,&block)
+      run_task(Task.new(options,&block))
     end
 
     #
