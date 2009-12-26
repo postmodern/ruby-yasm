@@ -2,6 +2,7 @@ doc
 pkg
 tmp/*
 scripts/*_wordlist.txt
+.yardoc
 .DS_Store
 *.db
 *.log
