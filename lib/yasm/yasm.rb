@@ -29,7 +29,7 @@ module YASM
   #   The YASM architecture.
   #
   def YASM.arch
-    @@yasm_arch
+    @@yasm_arch ||= nil
   end
 
   #
@@ -52,7 +52,7 @@ module YASM
   #   The YASM machine.
   #
   def YASM.machine
-    @@yasm_machine
+    @@yasm_machine ||= nil
   end
 
   #
@@ -75,7 +75,7 @@ module YASM
   #   The YASM debugging format.
   #
   def YASM.debug_format
-    @@yasm_debug_format
+    @@yasm_debug_format ||= nil
   end
 
   #
