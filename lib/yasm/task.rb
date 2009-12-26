@@ -151,7 +151,7 @@ module YASM
     #
     # @return [true]
     #
-    def x86!
+    def target_x86!
       self.arch = :x86
       self.machine = :x86
       return true
@@ -162,7 +162,7 @@ module YASM
     #
     # @return [true]
     #
-    def amd64!
+    def target_amd64!
       self.arch = :x86
       self.machine = :amd64
       return true
