@@ -3,12 +3,48 @@ require 'yasm/yasm'
 require 'rprogram/task'
 
 module YASM
+  #
+  # == YASM options:
+  #
+  # <tt>--version</tt>:: <tt>yasm.version</tt>
+  # <tt>--license</tt>:: <tt>yasm.license</tt>
+  # <tt>--help</tt>:: <tt>yasm.help</tt>
+  #
+  # <tt>--arch</tt>:: <tt>yasm.arch</tt>
+  # <tt>--parser</tt>:: <tt>yasm.parser</tt>
+  # <tt>--preproc</tt>:: <tt>yasm.preprocessor</tt>
+  # <tt>--oformat</tt>:: <tt>yasm.output_format</tt>
+  # <tt>--dformat</tt>:: <tt>yasm.debug_format</tt>
+  # <tt>--lformat</tt>:: <tt>yasm.list_format</tt>
+  #
+  # <tt>--list</tt>:: <tt>yasm.list_file</tt>
+  # <tt>--objfile</tt>:: <tt>yasm.output</tt>
+  # <tt>--mapfile</tt>:: <tt>yasm.map_file</tt>
+  #
+  # <tt>--machine</tt>:: <tt>yasm.machine</tt>
+  # <tt>--force-strict</tt>:: <tt>yasm.force_strict</tt>
+  # <tt>-w</tt>:: <tt>yasm.inhibit_warnings</tt>
+  # <tt>-W</tt>:: <tt>yasm.toggle_warnings</tt>
+  # <tt>-M</tt>:: <tt>yasm.gen_makefile_deps</tt>
+  # <tt>-E</tt>:: <tt>yasm.redirect_errors_to</tt>
+  # <tt>-e</tt>:: <tt>yasm.redirect_errors</tt>
+  # <tt>--preproc-only</tt>:: <tt>yasm.preprocessor_only</tt>
+  # <tt>-I</tt>:: <tt>yasm.include</tt>
+  # <tt>-P</tt>:: <tt>yasm.pre_include</tt>
+  # <tt>-D</tt>:: <tt>yasm.define</tt>
+  # <tt>-U</tt>:: <tt>yasm.undefine</tt>
+  # <tt>-X</tt>:: <tt>yasm.message_style</tt>
+  # <tt>--prefix</tt>:: <tt>yasm.prefix</tt>
+  # <tt>--suffix</tt>:: <tt>yasm.suffix</tt>
+  #
+  # <tt>file</tt>:: <tt>yasm.file</tt>
+  #
   class Task < RProgram::Task
 
     long_option :flag => '--version'
     long_option :flag => '--license'
-
     long_option :flag => '--help'
+
     long_option :flag => '--arch', :equals => true
     long_option :flag => '--parser', :equals => true
     long_option :flag => '--preproc',
