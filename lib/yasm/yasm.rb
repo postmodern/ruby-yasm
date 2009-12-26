@@ -1,4 +1,10 @@
 module YASM
+  @@yasm_parser = :gas
+  @@yasm_arch = nil
+  @@yasm_machine = nil
+  @@yasm_debug_format = nil
+  @@yasm_output_format = :bin
+
   #
   # The default YASM parser to use.
   #
@@ -6,7 +12,7 @@ module YASM
   #   The YASM parser.
   #
   def YASM.parser
-    @@yasm_parser ||= :gas
+    @@yasm_parser
   end
 
   #
@@ -33,7 +39,7 @@ module YASM
   #   The YASM architecture.
   #
   def YASM.arch
-    @@yasm_arch ||= nil
+    @@yasm_arch
   end
 
   #
@@ -87,7 +93,7 @@ module YASM
   #   The YASM debugging format.
   #
   def YASM.debug_format
-    @@yasm_debug_format ||= nil
+    @@yasm_debug_format
   end
 
   #
@@ -114,7 +120,7 @@ module YASM
   #   The YASM output format.
   #
   def YASM.output_format
-    @@yasm_output_format ||= :bin
+    @@yasm_output_format
   end
 
   #
