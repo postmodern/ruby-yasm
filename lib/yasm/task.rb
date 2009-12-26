@@ -168,5 +168,16 @@ module YASM
       return true
     end
 
+    #
+    # Sets the YASM arch and machine to +lc3b+.
+    #
+    # @return [true]
+    #
+    def target_lc3b!
+      self.arch = :lc3b
+      self.machine = :lc3b
+      return true
+    end
+
   end
 end
