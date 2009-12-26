@@ -52,6 +52,19 @@ module YASM
 
     non_option :tailing => true, :name => :file
 
+    #
+    # Creates a new Task object.
+    #
+    # @param [Hash{Symbol => Object}] options
+    #   Additional options for the task.
+    #
+    # @yield [task]
+    #   If a block is given, it will be passed the newly created task
+    #   object.
+    #
+    # @yieldparam [Task]
+    #   The new task object.
+    #
     def initialize(options={},&block)
       super(options,&block)
 
@@ -62,6 +75,11 @@ module YASM
       self.output_format ||= YASM.output_format
     end
 
+    #
+    # Sets the YASM parser to +gas+.
+    #
+    # @return [true]
+    #
     def gas!
       self.parser = :gas
       return true
@@ -69,88 +87,173 @@ module YASM
 
     alias gnu! gas!
 
+    #
+    # Sets the YASM parser to +nasm+.
+    #
+    # @return [true]
+    #
     def nasm!
       self.parser = :nasm
       return true
     end
 
+    #
+    # Sets the YASM parser to +tasm+.
+    #
+    # @return [true]
+    #
     def tasm!
       self.parser = :tasm
       return true
     end
 
+    #
+    # Sets the YASM arch and machine to +x86+.
+    #
+    # @return [true]
+    #
     def x86!
       self.arch = :x86
       self.machine = :x86
       return true
     end
 
+    #
+    # Sets the YASM arch to +x86+ and the machine to +amd64+.
+    #
+    # @return [true]
+    #
     def amd64!
       self.arch = :x86
       self.machine = :amd64
       return true
     end
 
+    #
+    # Sets the YASM output format to +dbg+.
+    #
+    # @return [true]
+    #
     def dbg!
       self.output_format = :dbg
       return true
     end
 
+    #
+    # Sets the YASM output format to +bin+.
+    #
+    # @return [true]
+    #
     def bin!
       self.output_format = :bin
       return true
     end
 
+    #
+    # Sets the YASM output format to +dosexe+.
+    #
+    # @return [true]
+    #
     def dos_exe!
       self.output_format = :dosexe
       return true
     end
 
+    #
+    # Sets the YASM output format to +elf+.
+    #
+    # @return [true]
+    #
     def elf!
       self.output_format = :elf
       return true
     end
 
+    #
+    # Sets the YASM output format to +elf32+.
+    #
+    # @return [true]
+    #
     def elf32!
       self.output_format = :elf32
       return true
     end
 
+    #
+    # Sets the YASM output format to +elf64+.
+    #
+    # @return [true]
+    #
     def elf64!
       self.output_format = :elf64
       return true
     end
 
+    #
+    # Sets the YASM output format to +coff+.
+    #
+    # @return [true]
+    #
     def coff!
       self.output_format = :coff
       return true
     end
 
+    #
+    # Sets the YASM output format to +macho+.
+    #
+    # @return [true]
+    #
     def macho!
       self.output_format = :macho
       return true
     end
 
+    #
+    # Sets the YASM output format to +macho32+.
+    #
+    # @return [true]
+    #
     def macho32!
       self.output_format = :macho32
       return true
     end
 
+    #
+    # Sets the YASM output format to +macho64+.
+    #
+    # @return [true]
+    #
     def macho64!
       self.output_format = :macho64
       return true
     end
 
+    #
+    # Sets the YASM output format to +rdf+.
+    #
+    # @return [true]
+    #
     def rdf!
       self.output_format = :rdf
       return true
     end
 
+    #
+    # Sets the YASM output format to +win32+.
+    #
+    # @return [true]
+    #
     def win32!
       self.output_format = :win32
       return true
     end
 
+    #
+    # Sets the YASM output format to +win64+.
+    #
+    # @return [true]
+    #
     def win64!
       self.output_format = :win64
       return true
@@ -158,6 +261,11 @@ module YASM
 
     alias x64! win64!
 
+    #
+    # Sets the YASM output format to +xdf+.
+    #
+    # @return [true]
+    #
     def xdf!
       self.output_format = :xdf
       return true
