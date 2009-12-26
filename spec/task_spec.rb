@@ -142,4 +142,18 @@ describe Task do
       @task.machine.should == :amd64
     end
   end
+
+  describe "target_lc3b!" do
+    before(:all) do
+      @task = Task.new { |task| task.target_lc3b! }
+    end
+
+    it "should set the arch value" do
+      @task.arch.should == :lc3b
+    end
+
+    it "should set the machine value" do
+      @task.machine.should == :lc3b
+    end
+  end
 end
