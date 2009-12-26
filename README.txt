@@ -16,6 +16,38 @@ information in STABS, DWARF 2, and CodeView 8 formats.
 
 * Supports all of the +yasm+ command-line options.
 
+== EXAMPLES:
+
+* Assemble a binary file:
+
+    YASM::Program.assemble do |yasm|
+      yasm.parser = :gas
+      yasm.file = 'hello_world.S'
+      yasm.output = 'hello_world.o'
+    end
+
+* Assemble a binary file, and write the output to a temporary file:
+
+    YASM::Program.assemble_temp do |yasm|
+      yasm.parser = :gas
+      yasm.file = 'hello_world.S'
+    end
+    # => "/tmp/yasm.3386.0"
+
+* Assemble amd64 assembly, in GAS syntax, into an ELF64 file with
+  debugging information:
+
+    YASM::Program.assemble do |yasm|
+      yasm.amd64!
+
+      yasm.parser = :gas
+      yasm.file = 'hello_world.S'
+
+      yasm.output = 'hello_world.o'
+      yasm.output_format = :elf64
+      yasm.debug_format = :stabs
+    end
+
 == REQUIREMENTS:
 
 * {yasm}[http://www.tortall.net/projects/yasm/] >= 0.8.0.
