@@ -18,7 +18,6 @@ describe Program do
       yasm.x86!
 
       yasm.file = assembly_file('gas')
-      yasm.output_format = :bin
       yasm.output = file
     end
 
@@ -31,7 +30,6 @@ describe Program do
       yasm.x86!
 
       yasm.file = assembly_file('gas')
-      yasm.output_format = :bin
     end
 
     file.should_not be_nil
