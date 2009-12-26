@@ -25,7 +25,7 @@ module YASM
     #   Specifies whether the command exited normally.
     #
     def self.assmeble(options={},&block)
-      self.find.assemble(options,&block)
+      self.find().assemble(options,&block)
     end
 
     #
@@ -46,7 +46,7 @@ module YASM
     #   The temporary file containing the assembled object code.
     #
     def self.assemble_temp(options={},&block)
-      self.find.assemble(options,&block)
+      self.find().assemble(options,&block)
     end
 
     #
