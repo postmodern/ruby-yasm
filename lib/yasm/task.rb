@@ -119,19 +119,19 @@ module YASM
     #
     # @return [true]
     #
-    def gas!
+    def gas_syntax!
       self.parser = :gas
       return true
     end
 
-    alias gnu! gas!
+    alias gnu_syntax! gas_syntax!
 
     #
     # Sets the YASM parser to +nasm+.
     #
     # @return [true]
     #
-    def nasm!
+    def nasm_syntax!
       self.parser = :nasm
       return true
     end
@@ -141,7 +141,7 @@ module YASM
     #
     # @return [true]
     #
-    def tasm!
+    def tasm_syntax!
       self.parser = :tasm
       return true
     end
