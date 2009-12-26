@@ -115,9 +115,9 @@ describe Task do
     end
   end
 
-  describe "x86!" do
+  describe "target_x86!" do
     before(:all) do
-      @task = Task.new { |task| task.x86! }
+      @task = Task.new { |task| task.target_x86! }
     end
 
     it "should set the arch value" do
@@ -129,9 +129,9 @@ describe Task do
     end
   end
 
-  describe "amd64!" do
+  describe "target_amd64!" do
     before(:all) do
-      @task = Task.new { |task| task.amd64! }
+      @task = Task.new { |task| task.target_amd64! }
     end
 
     it "should set the arch value" do

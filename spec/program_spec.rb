@@ -14,8 +14,8 @@ describe Program do
     file = Tempfile.new('yasm').path
 
     @yasm.assemble do |yasm|
-      yasm.gas!
-      yasm.x86!
+      yasm.gas_syntax!
+      yasm.target_x86!
 
       yasm.file = assembly_file('gas')
       yasm.output = file
@@ -26,8 +26,8 @@ describe Program do
 
   it "should assemble a file, and write the output to a temporary file" do
     file = @yasm.assemble_temp do |yasm|
-      yasm.gas!
-      yasm.x86!
+      yasm.gas_syntax!
+      yasm.target_x86!
 
       yasm.file = assembly_file('gas')
     end
