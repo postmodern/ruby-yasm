@@ -10,5 +10,8 @@ lib/yasm/version.rb
 tasks/spec.rb
 tasks/yard.rb
 spec/spec_helper.rb
+spec/helpers/files.rb
+spec/helpers/files/gas.S
 spec/task_spec.rb
+spec/program_spec.rb
 spec/yasm_spec.rb
