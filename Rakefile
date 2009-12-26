@@ -9,6 +9,7 @@ require './tasks/yard.rb'
 Hoe.spec('ruby-yasm') do
   self.developer('Postmodern', 'postmodern.mod3@gmail.com')
   self.rubyforge_name = 'ruby-yasm'
+  self.readme_file = 'README.rdoc'
 
   self.extra_deps = [
     ['rprogram', '>=0.1.8']
