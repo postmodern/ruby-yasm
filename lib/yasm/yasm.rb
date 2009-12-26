@@ -19,7 +19,11 @@ module YASM
   #   The new YASM parser to use.
   #
   def YASM.parser=(new_parser)
-    @@yasm_parser = new_parser.to_sym
+    @@yasm_parser = if new_parser.nil?
+                      nil
+                    else
+                      new_parser.to_sym
+                    end
   end
 
   #
@@ -42,7 +46,11 @@ module YASM
   #   The new YASM architecture to assemble for.
   #
   def YASM.arch=(new_arch)
-    @@yasm_arch = new_arch.to_sym
+    if new_arch.nil?
+      @@yasm_arch = nil
+    else
+      @@yasm_arch = new_arch.to_sym
+    end
   end
 
   #
@@ -65,7 +73,11 @@ module YASM
   #   The new YASM machine to assemble for.
   #
   def YASM.machine=(new_machine)
-    @@yasm_machine = new_machine.to_sym
+    @@yasm_machine = if new_machine.nil?
+                       nil
+                     else
+                       new_machine.to_sym
+                     end
   end
 
   #
@@ -88,7 +100,11 @@ module YASM
   #   The new YASM debugging format to use.
   #
   def YASM.debug_format=(new_format)
-    @@yasm_debug_format = new_format.to_sym
+    @@yasm_debug_format = if new_format.nil?
+                            nil
+                          else
+                            new_format.to_sym
+                          end
   end
 
   #
@@ -111,6 +127,10 @@ module YASM
   #   The new YASM output format to use.
   #
   def YASM.output_format=(new_format)
-    @@yasm_output_format = new_format.to_sym
+    @@yasm_output_format = if new_format.nil?
+                             nil
+                           else
+                             new_format.to_sym
+                           end
   end
 end
