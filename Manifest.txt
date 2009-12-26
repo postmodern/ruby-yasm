@@ -10,4 +10,5 @@ lib/yasm/version.rb
 tasks/spec.rb
 tasks/yard.rb
 spec/spec_helper.rb
+spec/task_spec.rb
 spec/yasm_spec.rb
