@@ -66,7 +66,7 @@ module YASM
     #
     def assemble_temp(options={},&block)
       task = Task.new(options,&block)
-      task.output = TempFile.new('yasm')
+      task.output = Tempfile.new('yasm').path
 
       if run_task(task)
         return task.output
