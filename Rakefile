@@ -19,6 +19,8 @@ Hoe.spec('ruby-yasm') do
     ['rspec', '>=1.2.9'],
     ['yard', '>=0.5.2']
   ]
+
+  self.spec_extras = {:has_rdoc => 'yard'}
 end
 
 # vim: syntax=ruby
