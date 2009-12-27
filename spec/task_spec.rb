@@ -3,6 +3,13 @@ require 'yasm/task'
 require 'spec_helper'
 
 describe Task do
+  it "should support a :target option" do
+    task = Task.new(:target => :amd64)
+
+    task.arch.should == :x86
+    task.machine.should == :amd64
+  end
+
   describe "default" do
     describe "parser" do
       before(:all) do
