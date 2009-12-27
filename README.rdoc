@@ -23,7 +23,7 @@ STABS, DWARF 2, and CodeView 8 formats.
 * Assemble a binary file:
 
     YASM::Program.assemble do |yasm|
-      yasm.gas_syntax!
+      yasm.syntax = :gas
       yasm.file = 'hello_world.S'
       yasm.output = 'hello_world.o'
     end
@@ -31,7 +31,7 @@ STABS, DWARF 2, and CodeView 8 formats.
 * Assemble a binary file, and write the output to a temporary file:
 
     YASM::Program.assemble_temp do |yasm|
-      yasm.gas_syntax!
+      yasm.syntax = :gas
       yasm.file = 'hello_world.S'
     end
     # => "/tmp/yasm.3386.0"
@@ -40,9 +40,9 @@ STABS, DWARF 2, and CodeView 8 formats.
   debugging information:
 
     YASM::Program.assemble do |yasm|
-      yasm.target_amd64!
-      yasm.gas_syntax!
+      yasm.target! :amd64
 
+      yasm.syntax = :gas
       yasm.file = 'hello_world.S'
 
       yasm.output = 'hello_world.o'

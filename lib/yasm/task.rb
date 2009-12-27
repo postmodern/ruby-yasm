@@ -41,6 +41,13 @@ module YASM
   #
   class Task < RProgram::Task
 
+    # The known YASM targets
+    TARGETS = {
+      :x86 => {:arch => :x86, :machine => :x86},
+      :amd64 => {:arch => :x86, :machine => :amd64},
+      :lc3b => {:arch => :lc3b, :machine => :lc3b}
+    }
+
     long_option :flag => '--version'
     long_option :flag => '--license'
     long_option :flag => '--help'
@@ -111,81 +118,35 @@ module YASM
       self.output_format ||= YASM.output_format
     end
 
+    #
+    # Sets the YASM arch and machine.
+    #
+    # @param [String, Symbol] name
+    #   The target name.
+    #
+    # @raise [RuntimeError]
+    #   The specified target is unknown.
+    #
+    # @return [true]
+    #   The YASM arch and machine options were set successfully.
+    #
+    # @example
+    #   yasm.target! :amd64
+    #
+    def target!(name)
+      target = TARGETS[name.to_sym]
+
+      unless target
+        raise(RuntimeError,"unknown YASM target #{name.inspect}",caller)
+      end
+
+      self.arch = target[:arch]
+      self.machine = target[:machine]
+      return true
+    end
+
     alias syntax parser
     alias syntax= parser=
-
-    #
-    # Sets the YASM parser to +gas+.
-    #
-    # @return [true]
-    #
-    def gas_syntax!
-      self.parser = :gas
-      return true
-    end
-
-    #
-    # Sets the YASM parser to +gnu+.
-    #
-    # @return [true]
-    #
-    def gnu_syntax!
-      self.parser = :gnu
-      return true
-    end
-
-    #
-    # Sets the YASM parser to +nasm+.
-    #
-    # @return [true]
-    #
-    def nasm_syntax!
-      self.parser = :nasm
-      return true
-    end
-
-    #
-    # Sets the YASM parser to +tasm+.
-    #
-    # @return [true]
-    #
-    def tasm_syntax!
-      self.parser = :tasm
-      return true
-    end
-
-    #
-    # Sets the YASM arch and machine to +x86+.
-    #
-    # @return [true]
-    #
-    def target_x86!
-      self.arch = :x86
-      self.machine = :x86
-      return true
-    end
-
-    #
-    # Sets the YASM arch to +x86+ and the machine to +amd64+.
-    #
-    # @return [true]
-    #
-    def target_amd64!
-      self.arch = :x86
-      self.machine = :amd64
-      return true
-    end
-
-    #
-    # Sets the YASM arch and machine to +lc3b+.
-    #
-    # @return [true]
-    #
-    def target_lc3b!
-      self.arch = :lc3b
-      self.machine = :lc3b
-      return true
-    end
 
   end
 end
