@@ -116,6 +116,20 @@ describe Task do
   end
 
   describe "target!" do
+    it "should return true for valid targets" do
+      task = Task.new
+
+      task.target!(:amd64).should == true
+    end
+
+    it "should raise RuntimeError when passed unknown targets" do
+      task = Task.new
+
+      lambda {
+        task.target! :lol
+      }.should raise_error(RuntimeError)
+    end
+
     describe "x86" do
       before(:all) do
         @task = Task.new { |task| task.target! :x86 }
