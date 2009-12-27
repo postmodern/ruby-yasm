@@ -101,6 +101,9 @@ module YASM
     # @param [Hash{Symbol => Object}] options
     #   Additional options for the task.
     #
+    # @option options [String, Symbol] :target
+    #   The arch/machine to target.
+    #
     # @yield [task]
     #   If a block is given, it will be passed the newly created task
     #   object.
@@ -108,8 +111,14 @@ module YASM
     # @yieldparam [Task]
     #   The new task object.
     #
+    # @see Task#target!
+    #
     def initialize(options={},&block)
+      target = options.delete(:target)
+
       super(options,&block)
+
+      self.target!(target) if target
 
       self.parser ||= YASM.parser
       self.arch ||= YASM.arch
