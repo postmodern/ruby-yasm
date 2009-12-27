@@ -8,6 +8,7 @@ require './tasks/yard.rb'
 
 Hoe.spec('ruby-yasm') do
   self.developer('Postmodern', 'postmodern.mod3@gmail.com')
+  self.remote_rdoc_dir = '/'
   self.readme_file = 'README.rdoc'
   self.history_file = 'History.rdoc'
 
