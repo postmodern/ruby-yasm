@@ -128,7 +128,7 @@ module YASM
     end
 
     #
-    # Sets the YASM arch and machine.
+    # Sets the YASM +arch+ and +machine+.
     #
     # @param [String, Symbol] name
     #   The target name.
@@ -137,7 +137,7 @@ module YASM
     #   The specified target is unknown.
     #
     # @return [true]
-    #   The YASM arch and machine options were set successfully.
+    #   The YASM +arch+ and +machine+ options were set successfully.
     #
     # @example
     #   yasm.target! :amd64
