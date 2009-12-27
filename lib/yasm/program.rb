@@ -18,7 +18,7 @@ module YASM
     #   If a block is given, it will be passed a task object used to
     #   specify options for yasm.
     #
-    # @yieldparam [Task]
+    # @yieldparam [Task] task
     #   The yasm task object.
     #
     # @return [Boolean]
@@ -39,7 +39,7 @@ module YASM
     #   If a block is given, it will be passed a task object used to
     #   specify options for yasm.
     #
-    # @yieldparam [Task]
+    # @yieldparam [Task] task
     #   The yasm task object.
     #
     # @return [TempFile]
@@ -59,7 +59,7 @@ module YASM
     #   If a block is given, it will be passed a task object used to
     #   specify options for yasm.
     #
-    # @yieldparam [Task]
+    # @yieldparam [Task] task
     #   The yasm task object.
     #
     # @return [Boolean]
@@ -79,7 +79,7 @@ module YASM
     #   If a block is given, it will be passed a task object used to
     #   specify options for yasm.
     #
-    # @yieldparam [Task]
+    # @yieldparam [Task] task
     #   The yasm task object.
     #
     # @return [TempFile]

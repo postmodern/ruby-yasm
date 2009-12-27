@@ -108,7 +108,7 @@ module YASM
     #   If a block is given, it will be passed the newly created task
     #   object.
     #
-    # @yieldparam [Task]
+    # @yieldparam [Task] task
     #   The new task object.
     #
     # @see Task#target!
