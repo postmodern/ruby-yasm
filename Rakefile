@@ -19,7 +19,7 @@ Hoe.spec('ruby-yasm') do
   ]
 
   self.extra_dev_deps = [
-    ['rspec', '>=1.2.9'],
+    ['rspec', '>=1.3.0'],
     ['yard', '>=0.5.2']
   ]
 end
