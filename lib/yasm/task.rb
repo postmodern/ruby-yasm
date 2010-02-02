@@ -37,7 +37,7 @@ module YASM
   # * `--prefix` -  `yasm.prefix`
   # * `--suffix` -  `yasm.suffix`
   #
-  # `file` -  `yasm.file`
+  # * `file` -  `yasm.file`
   #
   class Task < RProgram - Task
 
