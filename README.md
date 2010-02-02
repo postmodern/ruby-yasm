@@ -1,10 +1,10 @@
-= ruby-yasm
+# ruby-yasm
 
 * http://www.tortall.net/projects/yasm/
 * http://www.sophsec.com/
 * Postmodern (postmodern.mod3 at gmail.com)
 
-== DESCRIPTION:
+## DESCRIPTION:
 
 A Ruby interface to YASM.
 
@@ -14,13 +14,13 @@ outputs binary, ELF32, ELF64, 32 and 64-bit Mach-O, RDOFF2, COFF, Win32,
 and Win64 object formats, and generates source debugging information in
 STABS, DWARF 2, and CodeView 8 formats.
 
-== FEATURES:
+## FEATURES:
 
-* Supports all of the +yasm+ command-line options.
+* Supports all of the `yasm` command-line options.
 
-== EXAMPLES:
+## EXAMPLES:
 
-* Assemble a binary file:
+Assemble a binary file:
 
     YASM::Program.assemble do |yasm|
       yasm.syntax = :gas
@@ -28,7 +28,7 @@ STABS, DWARF 2, and CodeView 8 formats.
       yasm.output = 'hello_world.o'
     end
 
-* Assemble a binary file, and write the output to a temporary file:
+Assemble a binary file, and write the output to a temporary file:
 
     YASM::Program.assemble_temp do |yasm|
       yasm.syntax = :gas
@@ -36,8 +36,8 @@ STABS, DWARF 2, and CodeView 8 formats.
     end
     # => "/tmp/yasm.3386.0"
 
-* Assemble amd64 assembly, in GAS syntax, into an ELF64 file with
-  debugging information:
+Assemble amd64 assembly, in GAS syntax, into an ELF64 file with
+debugging information:
 
     YASM::Program.assemble do |yasm|
       yasm.target! :amd64
@@ -50,16 +50,16 @@ STABS, DWARF 2, and CodeView 8 formats.
       yasm.debug_format = :stabs
     end
 
-== REQUIREMENTS:
+## REQUIREMENTS:
 
-* {yasm}[http://www.tortall.net/projects/yasm/] >= 0.8.0.
-* {rprogram}[http://rprogram.rubyforge.org/] >= 0.1.8.
+* [yasm](http://www.tortall.net/projects/yasm/) >= 0.8.0.
+* [rprogram](http://rprogram.rubyforge.org/) >= 0.1.8.
 
-== INSTALL:
+## INSTALL:
 
-  $ sudo gem install ruby-yasm
+    $ sudo gem install ruby-yasm
 
-== LICENSE:
+## LICENSE:
 
 (The MIT License)
 

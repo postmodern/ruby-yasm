@@ -4,42 +4,42 @@ require 'rprogram/task'
 
 module YASM
   #
-  # == YASM options:
+  # ## YASM options:
   #
-  # <tt>--version</tt>:: <tt>yasm.version</tt>
-  # <tt>--license</tt>:: <tt>yasm.license</tt>
-  # <tt>--help</tt>:: <tt>yasm.help</tt>
+  # * `--version` -  `yasm.version`
+  # * `--license` -  `yasm.license`
+  # * `--help` -  `yasm.help`
   #
-  # <tt>--arch</tt>:: <tt>yasm.arch</tt>
-  # <tt>--parser</tt>:: <tt>yasm.parser</tt>
-  # <tt>--preproc</tt>:: <tt>yasm.preprocessor</tt>
-  # <tt>--oformat</tt>:: <tt>yasm.output_format</tt>
-  # <tt>--dformat</tt>:: <tt>yasm.debug_format</tt>
-  # <tt>--lformat</tt>:: <tt>yasm.list_format</tt>
+  # * `--arch` -  `yasm.arch`
+  # * `--parser` -  `yasm.parser`
+  # * `--preproc` -  `yasm.preprocessor`
+  # * `--oformat` -  `yasm.output_format`
+  # * `--dformat` -  `yasm.debug_format`
+  # * `--lformat` -  `yasm.list_format`
   #
-  # <tt>--list</tt>:: <tt>yasm.list_file</tt>
-  # <tt>--objfile</tt>:: <tt>yasm.output</tt>
-  # <tt>--mapfile</tt>:: <tt>yasm.map_file</tt>
+  # * `--list` -  `yasm.list_file`
+  # * `--objfile` -  `yasm.output`
+  # * `--mapfile` -  `yasm.map_file`
   #
-  # <tt>--machine</tt>:: <tt>yasm.machine</tt>
-  # <tt>--force-strict</tt>:: <tt>yasm.force_strict</tt>
-  # <tt>-w</tt>:: <tt>yasm.inhibit_warnings</tt>
-  # <tt>-W</tt>:: <tt>yasm.toggle_warnings</tt>
-  # <tt>-M</tt>:: <tt>yasm.gen_makefile_deps</tt>
-  # <tt>-E</tt>:: <tt>yasm.redirect_errors_to</tt>
-  # <tt>-e</tt>:: <tt>yasm.redirect_errors</tt>
-  # <tt>--preproc-only</tt>:: <tt>yasm.preprocessor_only</tt>
-  # <tt>-I</tt>:: <tt>yasm.include</tt>
-  # <tt>-P</tt>:: <tt>yasm.pre_include</tt>
-  # <tt>-D</tt>:: <tt>yasm.define</tt>
-  # <tt>-U</tt>:: <tt>yasm.undefine</tt>
-  # <tt>-X</tt>:: <tt>yasm.message_style</tt>
-  # <tt>--prefix</tt>:: <tt>yasm.prefix</tt>
-  # <tt>--suffix</tt>:: <tt>yasm.suffix</tt>
+  # * `--machine` -  `yasm.machine`
+  # * `--force-strict` -  `yasm.force_strict`
+  # * `-w` -  `yasm.inhibit_warnings`
+  # * `-W` -  `yasm.toggle_warnings`
+  # * `-M` -  `yasm.gen_makefile_deps`
+  # * `-E` -  `yasm.redirect_errors_to`
+  # * `-e` -  `yasm.redirect_errors`
+  # * `--preproc-only` -  `yasm.preprocessor_only`
+  # * `-I` -  `yasm.include`
+  # * `-P` -  `yasm.pre_include`
+  # * `-D` -  `yasm.define`
+  # * `-U` -  `yasm.undefine`
+  # * `-X` -  `yasm.message_style`
+  # * `--prefix` -  `yasm.prefix`
+  # * `--suffix` -  `yasm.suffix`
   #
-  # <tt>file</tt>:: <tt>yasm.file</tt>
+  # `file` -  `yasm.file`
   #
-  class Task < RProgram::Task
+  class Task < RProgram - Task
 
     # The known YASM targets
     TARGETS = {
@@ -128,7 +128,7 @@ module YASM
     end
 
     #
-    # Sets the YASM +arch+ and +machine+.
+    # Sets the YASM `arch` and `machine`.
     #
     # @param [String, Symbol] name
     #   The target name.
@@ -137,7 +137,7 @@ module YASM
     #   The specified target is unknown.
     #
     # @return [true]
-    #   The YASM +arch+ and +machine+ options were set successfully.
+    #   The YASM `arch` and `machine` options were set successfully.
     #
     # @example
     #   yasm.target! :amd64

@@ -9,7 +9,7 @@ module YASM
     name_program 'yasm'
 
     #
-    # Finds the +yasm+ program and assembles a file.
+    # Finds the `yasm` program and assembles a file.
     #
     # @param [Hash{Symbol => Object}] options
     #   Additional options for yasm.
@@ -29,7 +29,7 @@ module YASM
     end
 
     #
-    # Finds the +yasm+ program, then assembles an assembly file and writes
+    # Finds the `yasm` program, then assembles an assembly file and writes
     # the output to a temporary file.
     #
     # @param [Hash{Symbol => Object}] options
