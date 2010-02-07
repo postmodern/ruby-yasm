@@ -5,7 +5,6 @@ Rakefile
 lib/yasm.rb
 lib/yasm/task.rb
 lib/yasm/program.rb
-lib/yasm/yasm.rb
 lib/yasm/version.rb
 spec/spec_helper.rb
 spec/helpers/files.rb
