@@ -36,7 +36,7 @@ module YASM
     #     yasm.output = 'code.o'
     #   end
     #
-    def self.assmeble(options={},&block)
+    def self.assemble(options={},&block)
       self.find().assemble(options,&block)
     end
 
