@@ -28,14 +28,6 @@ Assemble a binary file:
       yasm.output = 'hello_world.o'
     end
 
-Assemble a binary file, and write the output to a temporary file:
-
-    YASM::Program.assemble_temp do |yasm|
-      yasm.syntax = :gas
-      yasm.file = 'hello_world.S'
-    end
-    # => "/tmp/yasm.3386.0"
-
 Assemble amd64 assembly, in GAS syntax, into an ELF64 file with
 debugging information:
 
