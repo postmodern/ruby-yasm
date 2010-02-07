@@ -23,16 +23,4 @@ describe Program do
 
     File.size(file).should > 0
   end
-
-  it "should assemble a file, and write the output to a temporary file" do
-    file = @yasm.assemble_temp do |yasm|
-      yasm.target! :x86
-
-      yasm.syntax = :gas
-      yasm.file = assembly_file('gas')
-    end
-
-    file.should_not be_nil
-    File.size(file).should > 0
-  end
 end
