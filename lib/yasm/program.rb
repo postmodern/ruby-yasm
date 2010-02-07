@@ -24,6 +24,18 @@ module YASM
     # @return [Boolean]
     #   Specifies whether the command exited normally.
     #
+    # @example
+    #   Program.assemble(:parser => :gas, :output => 'code.o', :file => 'code.S')
+    #
+    # @example
+    #   Program.assemble do |yasm|
+    #     yasm.target! :x86
+    #
+    #     yasm.syntax = :gas
+    #     yasm.file = 'code.S'
+    #     yasm.output = 'code.o'
+    #   end
+    #
     def self.assmeble(options={},&block)
       self.find().assemble(options,&block)
     end
@@ -43,6 +55,18 @@ module YASM
     #
     # @return [Boolean]
     #   Specifies whether the command exited normally.
+    #
+    # @example
+    #   Program.assemble(:parser => :gas, :output => 'code.o', :file => 'code.S')
+    #
+    # @example
+    #   Program.assemble do |yasm|
+    #     yasm.target! :x86
+    #
+    #     yasm.syntax = :gas
+    #     yasm.file = 'code.S'
+    #     yasm.output = 'code.o'
+    #   end
     #
     def assemble(options={},&block)
       run_task(Task.new(options,&block))
