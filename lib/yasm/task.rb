@@ -1,5 +1,3 @@
-require 'yasm/yasm'
-
 require 'rprogram/task'
 
 module YASM
@@ -119,12 +117,6 @@ module YASM
       super(options,&block)
 
       self.target!(target) if target
-
-      self.parser ||= YASM.parser
-      self.arch ||= YASM.arch
-      self.machine ||= YASM.machine
-      self.debug_format ||= YASM.debug_format
-      self.output_format ||= YASM.output_format
     end
 
     #
