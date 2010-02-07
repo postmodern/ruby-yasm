@@ -39,7 +39,7 @@ module YASM
   #
   # * `file` -  `yasm.file`
   #
-  class Task < RProgram - Task
+  class Task < RProgram::Task
 
     # The known YASM targets
     TARGETS = {
