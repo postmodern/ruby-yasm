@@ -9,45 +9,46 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Postmodern"]
-  s.date = %q{2010-02-11}
+  s.date = %q{2010-04-15}
   s.description = %q{A Ruby interface to YASM.}
   s.email = %q{postmodern.mod3@gmail.com}
   s.extra_rdoc_files = [
     "ChangeLog.md",
-    "LICENSE.txt",
-    "README.md"
+     "LICENSE.txt",
+     "README.md"
   ]
   s.files = [
     ".gitignore",
-    ".specopts",
-    ".yardopts",
-    "ChangeLog.md",
-    "LICENSE.txt",
-    "README.md",
-    "Rakefile",
-    "lib/yasm.rb",
-    "lib/yasm/program.rb",
-    "lib/yasm/task.rb",
-    "lib/yasm/version.rb",
-    "spec/helpers/files.rb",
-    "spec/helpers/files/gas.S",
-    "spec/program_spec.rb",
-    "spec/spec_helper.rb",
-    "spec/task_spec.rb",
-    "spec/yasm_spec.rb"
+     ".specopts",
+     ".yardopts",
+     "ChangeLog.md",
+     "LICENSE.txt",
+     "README.md",
+     "Rakefile",
+     "lib/yasm.rb",
+     "lib/yasm/program.rb",
+     "lib/yasm/task.rb",
+     "lib/yasm/version.rb",
+     "ruby-yasm.gemspec",
+     "spec/helpers/files.rb",
+     "spec/helpers/files/gas.S",
+     "spec/program_spec.rb",
+     "spec/spec_helper.rb",
+     "spec/task_spec.rb",
+     "spec/yasm_spec.rb"
   ]
   s.has_rdoc = %q{yard}
   s.homepage = %q{http://github.com/sophsec/ruby-yasm}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.5}
+  s.rubygems_version = %q{1.3.6}
   s.summary = %q{A Ruby interface to YASM.}
   s.test_files = [
-    "spec/helpers/files.rb",
     "spec/spec_helper.rb",
-    "spec/yasm_spec.rb",
-    "spec/program_spec.rb",
-    "spec/task_spec.rb"
+     "spec/yasm_spec.rb",
+     "spec/helpers/files.rb",
+     "spec/program_spec.rb",
+     "spec/task_spec.rb"
   ]
 
   if s.respond_to? :specification_version then
