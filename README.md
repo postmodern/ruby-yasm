@@ -47,7 +47,7 @@ debugging information:
 ## Requirements
 
 * [yasm](http://www.tortall.net/projects/yasm/) >= 0.8.0.
-* [rprogram](http://rprogram.rubyforge.org/) >= 0.1.8.
+* [rprogram](http://rprogram.rubyforge.org/) ~> 0.2.
 
 ## Install
 
