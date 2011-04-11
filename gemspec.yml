@@ -12,7 +12,7 @@ has_yard: true
 requirements: yasm >= 0.6.0
 
 dependencies:
-  rprogram: ~> 0.2
+  rprogram: ~> 0.3
 
 development_dependencies:
   ore-tasks: ~> 0.4

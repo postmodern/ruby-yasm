@@ -14,6 +14,9 @@ module YASM
     # @param [Hash{Symbol => Object}] options
     #   Additional options for yasm.
     #
+    # @param [Hash{Symbol => Object}] exec_options
+    #   Additional exec-options.
+    #
     # @yield [task]
     #   If a block is given, it will be passed a task object used to
     #   specify options for yasm.
@@ -36,8 +39,10 @@ module YASM
     #     yasm.output = 'code.o'
     #   end
     #
-    def Program.assemble(options={},&block)
-      find.assemble(options,&block)
+    # @see #assemble
+    #
+    def Program.assemble(options={},exec_options={},&block)
+      find.assemble(options,exec_options,&block)
     end
 
     #
@@ -46,6 +51,9 @@ module YASM
     # @param [Hash{Symbol => Object}] options
     #   Additional options for yasm.
     #
+    # @param [Hash{Symbol => Object}] exec_options
+    #   Additional exec-options.
+    #
     # @yield [task]
     #   If a block is given, it will be passed a task object used to
     #   specify options for yasm.
@@ -68,8 +76,11 @@ module YASM
     #     yasm.output = 'code.o'
     #   end
     #
-    def assemble(options={},&block)
-      run_task(Task.new(options,&block))
+    # @see http://rubydoc.info/gems/rprogram/0.3.0/RProgram/Program#run-instance_method
+    #   For additional exec-options.
+    #
+    def assemble(options={},exec_options={},&block)
+      run_task(Task.new(options,&block),exec_options)
     end
 
   end
