@@ -1,6 +1,6 @@
 require 'rubygems'
-gem 'rspec', '>=1.3.0'
-require 'spec'
+gem 'rspec', '~> 2.4'
+require 'rspec'
 
 require 'yasm/version'
 
