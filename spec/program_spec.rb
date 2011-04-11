@@ -1,7 +1,8 @@
-require 'yasm/program'
-
 require 'spec_helper'
 require 'helpers/files'
+
+require 'yasm/program'
+require 'tempfile'
 
 describe Program do
   include Helpers::Files

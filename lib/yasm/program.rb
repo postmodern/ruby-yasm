@@ -1,7 +1,6 @@
 require 'yasm/task'
 
 require 'rprogram'
-require 'tempfile'
 
 module YASM
   class Program < RProgram::Program
