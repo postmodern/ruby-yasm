@@ -116,7 +116,7 @@ module YASM
 
       super(options,&block)
 
-      self.target!(target) if target
+      target!(target) if target
     end
 
     #

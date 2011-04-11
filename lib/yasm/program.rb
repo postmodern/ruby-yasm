@@ -41,7 +41,7 @@ module YASM
     #
     # @see #assemble
     #
-    def Program.assemble(options={},exec_options={},&block)
+    def self.assemble(options={},exec_options={},&block)
       find.assemble(options,exec_options,&block)
     end
 
