@@ -55,5 +55,6 @@ debugging information:
 
 ## License
 
-See {file:LICENSE.txt} for license information.
+Copyright (c) 2009-2011 Hal Brodigan
 
+See {file:LICENSE.txt} for license information.
