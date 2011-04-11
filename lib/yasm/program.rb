@@ -37,7 +37,7 @@ module YASM
     #   end
     #
     def Program.assemble(options={},&block)
-      Program.find().assemble(options,&block)
+      find.assemble(options,&block)
     end
 
     #
