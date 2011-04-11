@@ -1,10 +1,10 @@
 # ruby-yasm
 
-* [github.com/sophsec/ruby-yasm](http://github.com/sophsec/ruby-yasm/)
-* [github.com/sophsec/ruby-yasm/issues](http://github.com/sophsec/ruby-yasm/issues)
+* [Source](http://github.com/sophsec/ruby-yasm/)
+* [Issues](http://github.com/sophsec/ruby-yasm/issues)
+* [Email](mailto:postmodern.mod3 at gmail.com)
 * [www.tortall.net/projects/yasm](http://www.tortall.net/projects/yasm/)
 * [www.sophsec.com](http://www.sophsec.com/)
-* Postmodern (postmodern.mod3 at gmail.com)
 
 ## Description
 
