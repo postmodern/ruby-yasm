@@ -1,6 +1,8 @@
 name: ruby-yasm
 summary: A Ruby interface to YASM.
-description: A Ruby interface to YASM.
+description:
+  ruby-yasm provides a Ruby interface to YASM assembler.
+
 license: MIT
 authors: Postmodern
 email: postmodern.mod3@gmail.com
