@@ -125,7 +125,7 @@ module YASM
     # @param [String, Symbol] name
     #   The target name.
     #
-    # @raise [RuntimeError]
+    # @raise [ArgumentError]
     #   The specified target is unknown.
     #
     # @return [true]
@@ -138,7 +138,7 @@ module YASM
       target = TARGETS[name.to_sym]
 
       unless target
-        raise("unknown YASM target #{name.inspect}")
+        raise(ArgumentError,"unknown YASM target #{name.inspect}")
       end
 
       self.arch    = target[:arch]

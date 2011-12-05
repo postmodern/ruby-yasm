@@ -17,12 +17,12 @@ describe Task do
       task.target!(:amd64).should == true
     end
 
-    it "should raise RuntimeError when passed unknown targets" do
+    it "should raise ArgumentError when passed unknown targets" do
       task = Task.new
 
       lambda {
         task.target! :lol
-      }.should raise_error(RuntimeError)
+      }.should raise_error(ArgumentError)
     end
 
     describe "x86" do
