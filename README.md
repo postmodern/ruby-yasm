@@ -26,7 +26,7 @@ Assemble a binary file:
 
     YASM::Program.assemble do |yasm|
       yasm.syntax = :gas
-      yasm.file = 'hello_world.S'
+      yasm.file   = 'hello_world.S'
       yasm.output = 'hello_world.o'
     end
 
@@ -37,11 +37,11 @@ debugging information:
       yasm.target! :amd64
 
       yasm.syntax = :gas
-      yasm.file = 'hello_world.S'
+      yasm.file   = 'hello_world.S'
 
-      yasm.output = 'hello_world.o'
+      yasm.output        = 'hello_world.o'
       yasm.output_format = :elf64
-      yasm.debug_format = :stabs
+      yasm.debug_format  = :stabs
     end
 
 ## Requirements
