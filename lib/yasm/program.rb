@@ -27,14 +27,18 @@ module YASM
     #   Specifies whether the command exited normally.
     #
     # @example
-    #   Program.assemble(:parser => :gas, :output => 'code.o', :file => 'code.S')
+    #   Program.assemble(
+    #     :parser => :gas,
+    #     :output => 'code.o',
+    #     :file   => 'code.S'
+    #   )
     #
     # @example
     #   Program.assemble do |yasm|
     #     yasm.target! :x86
     #
     #     yasm.syntax = :gas
-    #     yasm.file = 'code.S'
+    #     yasm.file   = 'code.S'
     #     yasm.output = 'code.o'
     #   end
     #
@@ -64,14 +68,18 @@ module YASM
     #   Specifies whether the command exited normally.
     #
     # @example
-    #   Program.assemble(:parser => :gas, :output => 'code.o', :file => 'code.S')
+    #   Program.assemble(
+    #     :parser => :gas,
+    #     :output => 'code.o',
+    #     :file   => 'code.S'
+    #   )
     #
     # @example
     #   Program.assemble do |yasm|
     #     yasm.target! :x86
     #
     #     yasm.syntax = :gas
-    #     yasm.file = 'code.S'
+    #     yasm.file   = 'code.S'
     #     yasm.output = 'code.o'
     #   end
     #
