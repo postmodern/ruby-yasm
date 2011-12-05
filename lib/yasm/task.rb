@@ -41,9 +41,9 @@ module YASM
 
     # The known YASM targets
     TARGETS = {
-      :x86 => {:arch => :x86, :machine => :x86},
+      :x86   => {:arch => :x86, :machine => :x86},
       :amd64 => {:arch => :x86, :machine => :amd64},
-      :lc3b => {:arch => :lc3b, :machine => :lc3b}
+      :lc3b  => {:arch => :lc3b, :machine => :lc3b}
     }
 
     long_option :flag => '--version'
@@ -75,21 +75,21 @@ module YASM
                 :equals => true,
                 :name => :map_file
 
-    long_option :flag => '--machine', :equals => true
-    long_option :flag => '--force-strict'
+    long_option  :flag => '--machine', :equals => true
+    long_option  :flag => '--force-strict'
     short_option :flag => '-w', :name => :inhibit_warnings
     short_option :flag => '-W', :name => :toggle_warnings
     short_option :flag => '-M', :name => :gen_makefile_deps
     short_option :flag => '-E', :name => :redirect_errors_to
     short_option :flag => '-s', :name => :redirect_errors
-    long_option :flag => '--preproc-only', :name => :preprocessor_only
+    long_option  :flag => '--preproc-only', :name => :preprocessor_only
     short_option :flag => '-I', :name => :include, :multiple => true
     short_option :flag => '-P', :name => :pre_include, :multiple => true
     short_option :flag => '-D', :name => :define, :multiple => true
     short_option :flag => '-U', :name => :undefine, :multiple => true
     short_option :flag => '-X', :name => :message_style
-    long_option :flag => '--prefix'
-    long_option :flag => '--suffix'
+    long_option  :flag => '--prefix'
+    long_option  :flag => '--suffix'
 
     non_option :tailing => true, :name => :file
 
@@ -138,10 +138,10 @@ module YASM
       target = TARGETS[name.to_sym]
 
       unless target
-        raise(RuntimeError,"unknown YASM target #{name.inspect}",caller)
+        raise("unknown YASM target #{name.inspect}")
       end
 
-      self.arch = target[:arch]
+      self.arch    = target[:arch]
       self.machine = target[:machine]
       return true
     end
