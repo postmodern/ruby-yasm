@@ -26,44 +26,44 @@ describe Task do
     end
 
     describe "x86" do
-      before(:all) do
-        @task = Task.new { |task| task.target! :x86 }
+      subject do
+        Task.new { |task| task.target! :x86 }
       end
 
       it "should set the arch value" do
-        @task.arch.should == :x86
+        subject.arch.should == :x86
       end
 
       it "should set the machine value" do
-        @task.machine.should == :x86
+        subject.machine.should == :x86
       end
     end
 
     describe "amd64" do
-      before(:all) do
-        @task = Task.new { |task| task.target! :amd64 }
+      subject do
+        Task.new { |task| task.target! :amd64 }
       end
 
       it "should set the arch value" do
-        @task.arch.should == :x86
+        subject.arch.should == :x86
       end
 
       it "should set the machine value" do
-        @task.machine.should == :amd64
+        subject.machine.should == :amd64
       end
     end
 
     describe "lc3b" do
-      before(:all) do
-        @task = Task.new { |task| task.target! :lc3b }
+      subject do
+        Task.new { |task| task.target! :lc3b }
       end
 
       it "should set the arch value" do
-        @task.arch.should == :lc3b
+        subject.arch.should == :lc3b
       end
 
       it "should set the machine value" do
-        @task.machine.should == :lc3b
+        subject.machine.should == :lc3b
       end
     end
   end

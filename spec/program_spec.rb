@@ -7,14 +7,12 @@ require 'tempfile'
 describe Program do
   include Helpers::Files
 
-  before(:all) do
-    @yasm = Program.find
-  end
+  subject { described_class.find }
 
   it "should be able to assemble a file" do
     file = Tempfile.new('yasm').path
 
-    @yasm.assemble do |yasm|
+    subject.assemble do |yasm|
       yasm.target! :x86
 
       yasm.syntax = :gas
