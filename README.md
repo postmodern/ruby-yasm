@@ -1,7 +1,7 @@
 # ruby-yasm
 
-* [Source](http://github.com/sophsec/ruby-yasm/)
-* [Issues](http://github.com/sophsec/ruby-yasm/issues)
+* [Source](https://github.com/sophsec/ruby-yasm/)
+* [Issues](https://github.com/sophsec/ruby-yasm/issues)
 * [Email](mailto:postmodern.mod3 at gmail.com)
 * [www.tortall.net/projects/yasm](http://www.tortall.net/projects/yasm/)
 * [www.sophsec.com](http://www.sophsec.com/)
