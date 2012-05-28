@@ -55,6 +55,6 @@ debugging information:
 
 ## License
 
-Copyright (c) 2009-2011 Hal Brodigan
+Copyright (c) 2009-2017 Postmodern
 
 See {file:LICENSE.txt} for license information.
