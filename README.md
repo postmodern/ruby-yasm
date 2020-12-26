@@ -53,6 +53,20 @@ debugging information:
 
     $ sudo gem install ruby-yasm
 
+### yasm
+
+* Debian / Ubuntu:
+
+      $ sudo apt install yasm
+
+* RedHat / Fedora:
+
+      $ sudo dnf install yasm
+
+* Homebrew:
+
+      $ brew install yasm
+
 ## License
 
 Copyright (c) 2009-2017 Postmodern
