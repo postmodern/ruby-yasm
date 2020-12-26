@@ -1,6 +1,6 @@
-doc
-pkg
-.yardoc
+/doc
+/pkg
+/.yardoc
 .DS_Store
 *.log
 *.swp
