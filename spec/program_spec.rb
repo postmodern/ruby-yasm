@@ -20,6 +20,6 @@ describe Program do
       yasm.output = file
     end
 
-    File.size(file).should > 0
+    expect(File.size(file)).to be > 0
   end
 end

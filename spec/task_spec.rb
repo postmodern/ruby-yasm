@@ -6,23 +6,23 @@ describe Task do
   it "should support a :target option" do
     task = Task.new(:target => :amd64)
 
-    task.arch.should == :x86
-    task.machine.should == :amd64
+    expect(task.arch).to eq(:x86)
+    expect(task.machine).to eq(:amd64)
   end
 
   describe "target!" do
     it "should return true for valid targets" do
       task = Task.new
 
-      task.target!(:amd64).should == true
+      expect(task.target!(:amd64)).to eq(true)
     end
 
     it "should raise ArgumentError when passed unknown targets" do
       task = Task.new
 
-      lambda {
+      expect {
         task.target! :lol
-      }.should raise_error(ArgumentError)
+      }.to raise_error(ArgumentError)
     end
 
     describe "x86" do
@@ -31,11 +31,11 @@ describe Task do
       end
 
       it "should set the arch value" do
-        subject.arch.should == :x86
+        expect(subject.arch).to eq(:x86)
       end
 
       it "should set the machine value" do
-        subject.machine.should == :x86
+        expect(subject.machine).to eq(:x86)
       end
     end
 
@@ -45,11 +45,11 @@ describe Task do
       end
 
       it "should set the arch value" do
-        subject.arch.should == :x86
+        expect(subject.arch).to eq(:x86)
       end
 
       it "should set the machine value" do
-        subject.machine.should == :amd64
+        expect(subject.machine).to eq(:amd64)
       end
     end
 
@@ -59,11 +59,11 @@ describe Task do
       end
 
       it "should set the arch value" do
-        subject.arch.should == :lc3b
+        expect(subject.arch).to eq(:lc3b)
       end
 
       it "should set the machine value" do
-        subject.machine.should == :lc3b
+        expect(subject.machine).to eq(:lc3b)
       end
     end
   end
