@@ -3,7 +3,6 @@
 * [Source](https://github.com/sophsec/ruby-yasm/)
 * [Issues](https://github.com/sophsec/ruby-yasm/issues)
 * [www.tortall.net/projects/yasm](http://www.tortall.net/projects/yasm/)
-* [www.sophsec.com](http://www.sophsec.com/)
 
 ## Description
 
