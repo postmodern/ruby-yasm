@@ -94,6 +94,8 @@ module YASM
   #
   # @since 0.3.0
   #
+  # @api public
+  #
   class Command < CommandMapper::Command
 
     command 'yasm' do
