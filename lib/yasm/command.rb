@@ -2,7 +2,6 @@ require 'command_mapper/command'
 
 module YASM
   #
-  #
   # Provides an interface for invoking the `yasm` utility.
   #
   # ## Examples
