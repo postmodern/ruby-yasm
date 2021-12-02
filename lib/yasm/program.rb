@@ -1,20 +1,16 @@
-require 'yasm/task'
-
-require 'rprogram'
+require 'yasm/command'
 
 module YASM
-  class Program < RProgram::Program
-
-    name_program 'yasm'
+  #
+  # @deprecated Please use {Command} instead.
+  #
+  class Program < Command
 
     #
     # Finds the `yasm` program and assembles a file.
     #
     # @param [Hash{Symbol => Object}] options
     #   Additional options for yasm.
-    #
-    # @param [Hash{Symbol => Object}] exec_options
-    #   Additional exec-options.
     #
     # @yield [task]
     #   If a block is given, it will be passed a task object used to
@@ -44,8 +40,8 @@ module YASM
     #
     # @see #assemble
     #
-    def self.assemble(options={},exec_options={},&block)
-      find.assemble(options,exec_options,&block)
+    def self.assemble(options={},&block)
+      new(options,&block).assemble()
     end
 
     #
@@ -83,11 +79,22 @@ module YASM
     #     yasm.output = 'code.o'
     #   end
     #
-    # @see http://rubydoc.info/gems/rprogram/0.3.0/RProgram/Program#run-instance_method
-    #   For additional exec-options.
+    def assemble(options={})
+      options.each do |name,value|
+        self[name] = value
+      end
+
+      yield self if block_given?
+
+      run_command()
+    end
+
     #
-    def assemble(options={},exec_options={},&block)
-      run_task(Task.new(options,&block),exec_options)
+    # @deprecated Please use {#target=} instead.
+    #
+    def target!(name)
+      self.target = name
+      return true
     end
 
   end
