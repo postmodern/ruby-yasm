@@ -45,7 +45,7 @@ debugging information:
 ## Requirements
 
 * [yasm](http://www.tortall.net/projects/yasm/) >= 0.8.0
-* [rprogram](http://rprogram.rubyforge.org/) ~> 0.3
+* [rprogram](https://github.com/postmodern/rprogram#readme) ~> 0.3
 
 ## Install
 
