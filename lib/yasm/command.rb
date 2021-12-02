@@ -135,22 +135,22 @@ module YASM
       option '--oformat', equals: true,
                           value: {
                             type: Enum[
-                                    :dbg, # Trace of all info passed to object format module
-                                    :bin, # Flat format binary
-                                    :dosexe, # DOS .EXE format binary
-                                    :elf, # ELF
-                                    :elf32, # ELF (32-bit)
-                                    :elf64, # ELF (64-bit)
-                                    :elfx32, # ELF (x32)
-                                    :coff, # COFF (DJGPP)
-                                    :macho, # Mac OS X ABI Mach-O File Format
+                                    :dbg,     # Trace of all info passed to object format module
+                                    :bin,     # Flat format binary
+                                    :dosexe,  # DOS .EXE format binary
+                                    :elf,     # ELF
+                                    :elf32,   # ELF (32-bit)
+                                    :elf64,   # ELF (64-bit)
+                                    :elfx32,  # ELF (x32)
+                                    :coff,    # COFF (DJGPP)
+                                    :macho,   # Mac OS X ABI Mach-O File Format
                                     :macho32, # Mac OS X ABI Mach-O File Format (32-bit)
                                     :macho64, # Mac OS X ABI Mach-O File Format (64-bit)
-                                    :rdf, # Relocatable Dynamic Object File Format (RDOFF) v2.0
-                                    :win32, # Win32
-                                    :win64, # Win64
-                                    :x64, # Win64
-                                    :xdf  # Extended Dynamic Object
+                                    :rdf,     # Relocatable Dynamic Object File Format (RDOFF) v2.0
+                                    :win32,   # Win32
+                                    :win64,   # Win64
+                                    :x64,     # Win64
+                                    :xdf      # Extended Dynamic Object
                                   ]
                           },
                           name: :output_format
