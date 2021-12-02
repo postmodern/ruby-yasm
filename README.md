@@ -3,11 +3,10 @@
 * [Source](https://github.com/sophsec/ruby-yasm/)
 * [Issues](https://github.com/sophsec/ruby-yasm/issues)
 * [Documentation](https://rubydoc.info/gems/ruby-yasm)
-* [www.tortall.net/projects/yasm](http://www.tortall.net/projects/yasm/)
 
 ## Description
 
-A Ruby interface to YASM.
+A Ruby interface to [YASM][yasm].
 
 YASM is a complete rewrite of the NASM assembler, YASM currently supports
 the x86 and AMD64 instruction sets, accepts NASM and GAS assembler syntaxes,
@@ -49,7 +48,7 @@ end
 
 ## Requirements
 
-* [yasm](http://www.tortall.net/projects/yasm/) >= 0.8.0
+* [yasm] >= 0.8.0
 * [rprogram](https://github.com/postmodern/rprogram#readme) ~> 0.3
 
 ## Install
@@ -83,3 +82,5 @@ $ brew install yasm
 Copyright (c) 2009-2021 Hal Brodigan
 
 See {file:LICENSE.txt} for license information.
+
+[yasm]: https://www.tortall.net/projects/yasm/
