@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
                   lib_dir = File.join(File.dirname(__FILE__),'lib')
                   $LOAD_PATH << lib_dir unless $LOAD_PATH.include?(lib_dir)
 
-                  require File.join(gem.name,'version')
+                  require 'yasm/version'
                   YASM::VERSION
                 end
 
