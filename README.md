@@ -23,19 +23,15 @@ STABS, DWARF 2, and CodeView 8 formats.
 Assemble a binary file:
 
 ```ruby
-YASM::Program.assemble do |yasm|
-  yasm.syntax = :gas
-  yasm.file   = 'hello_world.S'
-  yasm.output = 'hello_world.o'
-end
+YASM::Command.run(syntax: :gas, file: 'hello_world.S', output: 'hello_world.o')
 ```
 
 Assemble amd64 assembly, in GAS syntax, into an ELF64 file with
 debugging information:
 
 ```ruby
-YASM::Program.assemble do |yasm|
-  yasm.target! :amd64
+YASM::Command.run do |yasm|
+  yasm.target = :amd64
 
   yasm.syntax = :gas
   yasm.file   = 'hello_world.S'
@@ -49,7 +45,7 @@ end
 ## Requirements
 
 * [yasm] >= 0.8.0
-* [rprogram](https://github.com/postmodern/rprogram#readme) ~> 0.3
+* [command_mapper](https://github.com/postmodern/command_mapper.rb#readme) ~> 0.1
 
 ## Install
 
