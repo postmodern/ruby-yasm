@@ -12,12 +12,12 @@ module YASM
     # @param [Hash{Symbol => Object}] options
     #   Additional options for yasm.
     #
-    # @yield [task]
-    #   If a block is given, it will be passed a task object used to
+    # @yield [program]
+    #   If a block is given, it will be passed a program object used to
     #   specify options for yasm.
     #
-    # @yieldparam [Task] task
-    #   The yasm task object.
+    # @yieldparam [Program] program
+    #   The yasm program object.
     #
     # @return [Boolean]
     #   Specifies whether the command exited normally.
@@ -50,15 +50,12 @@ module YASM
     # @param [Hash{Symbol => Object}] options
     #   Additional options for yasm.
     #
-    # @param [Hash{Symbol => Object}] exec_options
-    #   Additional exec-options.
-    #
-    # @yield [task]
-    #   If a block is given, it will be passed a task object used to
+    # @yield [program]
+    #   If a block is given, it will be passed a program object used to
     #   specify options for yasm.
     #
-    # @yieldparam [Task] task
-    #   The yasm task object.
+    # @yieldparam [Program] program
+    #   The yasm program object.
     #
     # @return [Boolean]
     #   Specifies whether the command exited normally.
