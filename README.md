@@ -22,25 +22,29 @@ STABS, DWARF 2, and CodeView 8 formats.
 
 Assemble a binary file:
 
-    YASM::Program.assemble do |yasm|
-      yasm.syntax = :gas
-      yasm.file   = 'hello_world.S'
-      yasm.output = 'hello_world.o'
-    end
+```ruby
+YASM::Program.assemble do |yasm|
+  yasm.syntax = :gas
+  yasm.file   = 'hello_world.S'
+  yasm.output = 'hello_world.o'
+end
+```
 
 Assemble amd64 assembly, in GAS syntax, into an ELF64 file with
 debugging information:
 
-    YASM::Program.assemble do |yasm|
-      yasm.target! :amd64
+```ruby
+YASM::Program.assemble do |yasm|
+  yasm.target! :amd64
 
-      yasm.syntax = :gas
-      yasm.file   = 'hello_world.S'
+  yasm.syntax = :gas
+  yasm.file   = 'hello_world.S'
 
-      yasm.output        = 'hello_world.o'
-      yasm.output_format = :elf64
-      yasm.debug_format  = :stabs
-    end
+  yasm.output        = 'hello_world.o'
+  yasm.output_format = :elf64
+  yasm.debug_format  = :stabs
+end
+```
 
 ## Requirements
 
@@ -49,21 +53,29 @@ debugging information:
 
 ## Install
 
-    $ sudo gem install ruby-yasm
+```shell
+$ sudo gem install ruby-yasm
+```
 
 ### yasm
 
 * Debian / Ubuntu:
 
-      $ sudo apt install yasm
+```shell
+$ sudo apt install yasm
+```
 
 * RedHat / Fedora:
 
-      $ sudo dnf install yasm
+```shell
+$ sudo dnf install yasm
+```
 
 * Homebrew:
 
-      $ brew install yasm
+```shell
+$ brew install yasm
+```
 
 ## License
 
