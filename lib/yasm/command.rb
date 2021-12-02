@@ -68,8 +68,9 @@ module YASM
   #   * `vc`
   # * `--prefix` -  `yasm.prefix`
   # * `--suffix` -  `yasm.suffix`
-  #
   # * `file` -  `yasm.file`
+  #
+  # @since 0.3.0
   #
   class Command < CommandMapper::Command
 
