@@ -2,7 +2,30 @@ require 'command_mapper/command'
 
 module YASM
   #
-  # ## YASM options:
+  #
+  # Provides an interface for invoking the `yasm` utility.
+  #
+  # ## Examples
+  #
+  # Assemble a binary file:
+  #
+  #     YASM::Command.run(syntax: :gas, file: 'hello_world.S', output: 'hello_world.o')
+  #
+  # Assemble amd64 assembly, in GAS syntax, into an ELF64 file with
+  # debugging information:
+  #
+  #     YASM::Command.run do |yasm|
+  #       yasm.target = :amd64
+  #     
+  #       yasm.syntax = :gas
+  #       yasm.file   = 'hello_world.S'
+  #
+  #       yasm.output        = 'hello_world.o'
+  #       yasm.output_format = :elf64
+  #       yasm.debug_format  = :stabs
+  #     end
+  #
+  # ## `yasm` options:
   #
   # * `--version` -  `yasm.version`
   # * `--license` -  `yasm.license`
