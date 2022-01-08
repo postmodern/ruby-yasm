@@ -75,7 +75,7 @@ $ brew install yasm
 
 ## License
 
-Copyright (c) 2009-2021 Hal Brodigan
+Copyright (c) 2009-2022 Hal Brodigan
 
 See {file:LICENSE.txt} for license information.
 
