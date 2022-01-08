@@ -1,6 +1,6 @@
 ### 0.2.1 / 2012-05-27
 
-* {YASM::Task#target!} now raises an `ArgumentError` when given an unknown
+* `YASM::Task#target!` now raises an `ArgumentError` when given an unknown
   target.
 * Replaced ore-tasks with
   [rubygems-tasks](https://github.com/postmodern/rubygems-tasks#readme).
