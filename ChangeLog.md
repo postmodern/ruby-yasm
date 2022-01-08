@@ -1,3 +1,9 @@
+### 0.3.0 / 2022-01-07
+
+* Replace rprogram with [command_mapper].
+* Added {YASM::Command}.
+* Deprecated {YASM::Program} in favor of {YASM::Command}.
+
 ### 0.2.1 / 2012-05-27
 
 * `YASM::Task#target!` now raises an `ArgumentError` when given an unknown
@@ -22,3 +28,4 @@
 
 * Initial release.
 
+[command_mapper]: https://github.com/postmodern/command_mapper.rb#readme
