@@ -1,4 +1,6 @@
 require 'rspec'
-require 'yasm/version'
+require 'simplecov'
+SimpleCov.start
 
+require 'yasm/version'
 include YASM
