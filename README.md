@@ -50,7 +50,7 @@ end
 ## Install
 
 ```shell
-$ sudo gem install ruby-yasm
+$ gem install ruby-yasm
 ```
 
 ### yasm
