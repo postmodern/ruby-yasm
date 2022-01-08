@@ -45,7 +45,7 @@ end
 ## Requirements
 
 * [yasm] >= 0.8.0
-* [command_mapper](https://github.com/postmodern/command_mapper.rb#readme) ~> 0.1
+* [command_mapper] ~> 0.1
 
 ## Install
 
@@ -80,3 +80,4 @@ Copyright (c) 2009-2021 Hal Brodigan
 See {file:LICENSE.txt} for license information.
 
 [yasm]: https://www.tortall.net/projects/yasm/
+[command_mapper]: https://github.com/postmodern/command_mapper.rb#readme
