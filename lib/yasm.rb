@@ -1,3 +1,3 @@
-require 'yasm/command'
-require 'yasm/program'
-require 'yasm/version'
+require_relative 'yasm/command'
+require_relative 'yasm/program'
+require_relative 'yasm/version'

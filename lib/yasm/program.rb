@@ -1,4 +1,4 @@
-require 'yasm/command'
+require_relative 'command'
 
 module YASM
   #
