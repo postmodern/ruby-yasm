@@ -75,8 +75,6 @@ $ brew install yasm
 
 ## License
 
-Copyright (c) 2009-2022 Hal Brodigan
-
 See {file:LICENSE.txt} for license information.
 
 [yasm]: https://www.tortall.net/projects/yasm/
