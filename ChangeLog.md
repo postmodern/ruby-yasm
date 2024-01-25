@@ -1,3 +1,8 @@
+### 0.3.1 / 2024-01-25
+
+* Switched to using `require_relative` to improve load-times.
+* Added `# frozen_string_literal: true` to all files.
+
 ### 0.3.0 / 2022-01-07
 
 * Replace rprogram with [command_mapper].
